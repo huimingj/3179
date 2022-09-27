@@ -16,20 +16,20 @@
             "url": "https://raw.githubusercontent.com/huimingj/3179/main/assignment2/data/2022.csv"
           },
           "key": "Country",
-          "fields": ["Happiness score"]
+          "fields": ["Happiness Score"]
         }
       }
     ],
     "mark": {"type": "geoshape"},
     "encoding": {
       "color": {
-        "field": "Happiness score",
+        "field": "Happiness Score",
         "type": "quantitative"
-        }    
+        }
+          
       },
       "tooltip": [
         {"field": "properties.NAME", "type": "nominal", "title": "Country"},
-        {"field": "Happiness score", "type": "quantitative"}
+        {"field": "Happiness Score", "type": "quantitative"}
       ]
     }
-  
