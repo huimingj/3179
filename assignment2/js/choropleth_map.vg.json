@@ -8,28 +8,42 @@
       "url": "https://raw.githubusercontent.com/huimingj/3179/main/assignment2/js/ne_110m_admin_0_countries.topojson",
       "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
     },
-    "transform": [
+    "layer": [
       {
-        "lookup": "properties.NAME",
-        "from": {
-          "data": {
-            "url": "https://raw.githubusercontent.com/huimingj/3179/main/assignment2/data/2022.csv"
-          },
-          "key": "Country",
-          "fields": ["Happiness Score"]
+        "transform": [
+          {
+            "calculate": "'Data is not available in ' + datum.properties.NAME",
+            "as": "note"
+          }
+        ],
+        "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"},
+        "encoding": {"tooltip": {"field": "note"}}
+      },
+    
+    {
+      "transform": [
+        {
+          "lookup": "properties.NAME",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/huimingj/3179/main/assignment2/data/2022.csv"
+            },
+            "key": "Country",
+            "fields": ["Happiness Score"]
+          }
         }
-      }
-    ],
-    "mark": {"type": "geoshape"},
-    "encoding": {
-      "color": {
-        "field": "Happiness Score",
-        "type": "quantitative"
-        }
-          
+      ],
+      "mark": {"type": "geoshape"},
+      "encoding": {
+        "color": {
+          "field": "Happiness Score",
+          "type": "quantitative"
       },
       "tooltip": [
         {"field": "properties.NAME", "type": "nominal", "title": "Country"},
         {"field": "Happiness Score", "type": "quantitative"}
       ]
     }
+  }
+  ]
+}
