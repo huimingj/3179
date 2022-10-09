@@ -1,0 +1,155 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 600,
+    "title": "World Happiness Report 2022",
+    "data": {
+      "url": "https://raw.githubusercontent.com/huimingj/3179/main/assignment2/data/2022.csv"
+    },
+    "params": [
+      {
+        "name": "HappinessScore_Above",
+        "value": 20,
+        "bind": {
+          "input": "range",
+          "min": 20,
+          "max": 80,
+          "step": 1,
+          "name": "Minimum Happiness Score: "
+        }
+      },
+      {
+        "name": "Region_selection",
+        "bind": {
+          "input": "select",
+          "options": [
+            null,
+            "Western Europe",
+            "Middle East and North Africa",
+            "North America and ANZ",
+            "Central and Eastern Europe",
+            "Middle East and North Africa",
+            "Latin America and Caribbean",
+            "East Asia",
+            "Southeast Asia",
+            "Sub-Saharan Africa"
+            
+          ],
+          "labels": [
+            "Show All",
+            "Western Europe",
+            "Middle East and North Africa",
+            "North America and ANZ",
+            "Central and Eastern Europe",
+            "Middle East and North Africa",
+            "Latin America and Caribbean",
+            "East Asia",
+            "Southeast Asia",
+            "Sub-Saharan Africa"
+          ],
+          "name": "Region Selection: "
+        }
+      }
+    ],
+    "transform": [
+        {"filter": "Region_selection == null || datum.Region == Region_selection"},
+        {"filter": "datum.HappinessScore > HappinessScore_Above"}
+    ],
+
+    "encoding": {
+      "x": {
+        "field": "GDP",
+        "type": "quantitative",
+        "scale": {"type": "linear", "domain": [0, 30]}
+      },
+      "y": {
+        "field": "Social Support",
+        "type": "quantitative",
+        "scale": {"type": "linear", "domain": [0, 30]}
+  
+      }
+    },
+    "layer": [
+      {
+        "mark": "circle",
+        "encoding": {
+          "size": {
+            "field": "HappinessScore",
+            "type": "quantitative",
+            "scale": {
+              "type": "threshold",
+              "domain": [20, 30, 40, 50, 60, 70, 80],
+              "range": [10, 50, 150, 200, 300, 400, 500, 600]
+            },
+            "legend": {"format": ".1s"}
+          },
+          "color": {
+            "field": "Region",
+            "type": "nominal",
+            "scale": {
+              "domain": [
+                "Western Europe",
+                "Middle East and North Africa",
+                "North America and ANZ",
+                "Central and Eastern Europe",
+                "Middle East and North Africa",
+                "Latin America and Caribbean",
+                "East Asia",
+                "Southeast Asia",
+                "Sub-Saharan Africa"
+              ],
+              "range": [
+                "#a6cee3",
+                "#1f78b4",
+                "#b2df8a",
+                "#33a02c",
+                "#fb9a99",
+                "#e31a1c",
+                "#fdbf6f",
+                "#ff7f00",
+                "#cab2d6"
+              ]
+            }
+          },
+          "opacity": {"value": 0.6},
+          "tooltip": [
+            {"field": "Country", "type": "nominal"},
+            {"field": "GDP", "type": "quantitative", "format": ","},
+            {"field": "Social Support", "type": "quantitative", "format": ","},
+            {"field": "Freedom", "type": "quantitative", "format": ","},
+            {"field": "Life Expectancy", "type": "quantitative", "format": ","}
+
+          ]
+        }
+      },
+      {
+        "mark": {
+          "type": "text",
+          "align": "right",
+          "baseline": "middle",
+          "dx": -12,
+          "fontSize": 11.5,
+          "fontStyle": "italic"
+        },
+        "encoding": {
+          "text": {"field": "Country", "type": "nominal"},
+          "color": {"value": "black"},
+          "opacity": {
+            "condition": {
+              "test": "datum['Country'] == 'China' || datum['Country'] == 'Singapore' || datum['Country'] == 'Australia' || datum['Country'] == 'New Zealand' || datum['Country'] == 'Italy' || datum['Country'] == 'Yemen' ||  datum['Country'] == 'United States'",
+              "value": 1
+            },
+            "value": 0
+          },
+          "tooltip": [
+            {"field": "Country", "type": "nominal"},
+            {"field": "GDP", "type": "quantitative", "format": ","},
+            {"field": "Social Support", "type": "quantitative", "format": ","},
+            {"field": "Freedom", "type": "quantitative", "format": ","},
+            {"field": "Life Expectancy", "type": "quantitative", "format": ","}
+  
+          ]
+        }
+      }
+    ]
+  }
