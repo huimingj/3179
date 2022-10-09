@@ -1,0 +1,23 @@
+RANK,Country,Region,Happiness Score,GDP,Social Support,happiness Score,gdp,social Support,Life Expectancy,Freedom 
+1,Finland,Western Europe,78.21,12.58,18.92,7821,1892,1258,0.775,0.736
+2,Denmark,Western Europe,76.36,12.43,19.53,7636,1953,1243,0.777,0.719
+3,Iceland,Western Europe,75.57,13.2,19.36,7557,1936,1320,0.803,0.718
+4,Switzerland,Western Europe,75.21,12.26,20.26,7521,2026,1226,0.822,0.677
+5,Netherlands,Western Europe,74.14,12.06,19.45,7414,1945,1206,0.787,0.651
+6,Luxembourg*,Western Europe,74.04,11.55,22.09,7404,2209,1155,0.79,0.7
+7,Sweden,Western Europe,73.84,12.04,19.2,7384,1920,1204,0.803,0.724
+8,Norway,Western Europe,73.65,12.39,19.97,7365,1997,1239,0.786,0.728
+9,Israel,Middle East and North Africa,73.64,12.21,18.26,7364,1826,1221,0.818,0.568
+10,New Zealand,North America and ANZ,0.72,12.35,18.52,72,1852,1235,0.752,0.68
+11,Austria,Western Europe,71.63,11.65,19.31,7163,1931,1165,0.774,0.623
+12,Australia,North America and ANZ,71.62,12.03,19,7162,1900,1203,0.772,0.676
+13,Ireland,Western Europe,70.41,11.66,21.29,7041,2129,1166,0.779,0.627
+14,Germany,Western Europe,70.34,10.88,19.24,7034,1924,1088,0.776,0.585
+15,Canada,North America and ANZ,70.25,11.88,18.86,7025,1886,1188,0.783,0.659
+16,United States,North America and ANZ,69.77,11.82,19.82,6977,1982,1182,0.628,0.574
+17,United Kingdom,Western Europe,69.43,11.43,18.67,6943,1867,1143,0.75,0.597
+18,Czechia,Central and Eastern Europe,69.2,12.6,18.15,6920,1815,1260,0.715,0.66
+19,Belgium,Western Europe,68.05,11.06,19.07,6805,1907,1106,0.764,0.492
+20,France,Western Europe,66.87,12.19,18.63,6687,1863,1219,0.808,0.567
+21,Bahrain,Middle East and North Africa,66.47,10.29,18.54,6647,1854,1029,0.625,0.693
+22,Slovenia,Central and Eastern Europe,66.3,12.49,18.1,6630,1810,1249,0.769,0.685
