@@ -1,0 +1,13 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": "How life expectancy have an impact on the countries' overall happiness level" },
+    "data": {
+    "url":
+    "https://raw.githubusercontent.com/huimingj/3179/main/assignment2/data/2022.csv"
+    },
+    "mark": "point",
+    "encoding": {
+    "x": { "field": "Freedom", "type": "quantitative" },
+    "y": { "field": "HappinessScore", "type": "quantitative" }
+    }
+}
