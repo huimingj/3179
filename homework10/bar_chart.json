@@ -3,7 +3,7 @@
     "title": { "text": "Average Happiness level in different region" },
     "data": {
     "url":
-    "https://raw.githubusercontent.com/JiazhouLiu/FIT3179/main/VegaLite/city_daily_cost.csv"
+    "https://raw.githubusercontent.com/huimingj/3179/main/homework10/data/region_average.csv"
     },
     "mark": "bar",
     "encoding": {
