@@ -1,7 +1,5 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 400,
-    "height": 300,
     "title": { "text": "Average Happiness level in different region" },
     "data": {
     "url":
