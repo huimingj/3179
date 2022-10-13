@@ -1,0 +1,14 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": "Average Happiness level in different region" },
+    "data": {
+    "url":
+    "https://raw.githubusercontent.com/JiazhouLiu/FIT3179/main/VegaLite/city_daily_cost.csv"
+    },
+    "mark": "bar",
+    "encoding": {
+    "x": { "field": "HappinessScore", "type": "quantitative" },
+    "y": { "field": "Region", "type": "nominal" }
+    }
+}
+    
