@@ -9,7 +9,7 @@
     },
     "mark": "bar",
     "encoding": {
-    "x": { "field": "HappinessScore", "type": "quantitative" },
-    "y": { "field": "Region", "type": "nominal" }
+    "y": { "field": "HappinessScore", "type": "quantitative" },
+    "x": { "field": "Region", "type": "nominal" }
     }
 }
