@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 450,
+    "width": 300,
     "height": 300,
     "title": { "text": "Average Happiness level in different region" },
     "data": {
@@ -9,7 +9,8 @@
     },
     "mark": "bar",
     "encoding": {
-    "x": { "field": "Region", "type": "nominal" },
-    "y": { "field": "HappinessScore", "type": "quantitative" },
+    "x": { "field": "HappinessScore", "type": "quantitative" },
+    "y": { "field": "Region", "type": "nominal" }
+
     }
 }
