@@ -1,0 +1,25 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Pie Chart with percentage_tooltip",
+    "data": {
+        "values": [
+            {"Region": "Central and Eastern Europe", "Number": 17.5},
+            {"Region": "Commonwealth of Independent States", "Number": 6.7},
+            {"Region": "East Asia", "Number": 5.4},
+            {"Region": "Latin America and Caribbean", "Number": 18.9},
+            {"Region": "Middle East and North Africa", "Number": 6.7},
+            {"Region": "North America and ANZ", "Number": 5.4},
+            {"Region": "South Asia", "Number": 5.4},
+            {"Region": "Southeast Asia", "Number": 5.4},
+            {"Region": "Sub-Saharan Africa", "Number": 1.3},
+            {"Region": "Western Europe", "Number": 27.3}
+          ]
+    },
+    "mark": {"type": "arc", "tooltip": true},
+    "encoding": {
+      "theta": {"field": "Number", "type": "quantitative", "stack": true},
+      "color": {"field": "Region", "type": "nominal"}
+      
+}
+}
+  
