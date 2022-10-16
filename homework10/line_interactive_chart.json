@@ -1,14 +1,15 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": "The relationship between countries' happiness level and life expectancy" },
     "data": {
     "url":
     "https://raw.githubusercontent.com/huimingj/3179/main/assignment2/data/2022.csv"
     },
     "vconcat": [
     {
-    "width": 600,
+    "width": 480,
     "height": 240,
-    "mark": "line",
+    "mark": {"type": "line", "tooltip": true},
     "encoding": {
     "x": {
     "field": "Life Expectancy",
@@ -16,21 +17,22 @@
     "scale": {"domain": {"param": "brush"}},
     "axis": {"title": ""}
     },
-    "y": {"field": "HappinessScore", "type": "quantitative"}
+    "y": {"field": "HappinessScore", "type": "quantitative", "title": "Happiness score"}
     }
     },
     {
-    "width": 600,
+    "width": 480,
     "height": 60,
-    "mark": "line",
+    "mark": {"type": "line", "tooltip": true},
     "params": [
     {"name": "brush", "select": {"type": "interval", "encodings": ["x"]}}
     ],
     "encoding": {
-    "x": {"field": "Life Expectancy", "type": "quantitative"},
+    "x": {"field": "Life Expectancy", "type": "quantitative", "title": "Life expectancy"},
     "y": {
     "field": "HappinessScore",
     "type": "quantitative",
+    "title": "Happiness score", 
     "axis": {"tickCount": 3, "grid": false}
     }
     }
