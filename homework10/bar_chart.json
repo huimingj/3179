@@ -1,16 +1,16 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 300,
+    "width": 500,
     "height": 300,
-    "title": { "text": "Average Happiness level in different region" },
+    "title": { "text": "Average happiness level in different regions" },
     "data": {
     "url":
     "https://raw.githubusercontent.com/huimingj/3179/main/homework10/data/region_average.csv"
     },
-    "mark": "bar",
+    "mark": {"type": "bar", "tooltip": true},
     "encoding": {
-    "x": { "field": "HappinessScore", "type": "quantitative" },
+    "x": { "field": "HappinessScore", "type": "quantitative", "title": "Happiness score"},
     "y": { "field": "Region", "type": "nominal" }
-
     }
 }
+    
